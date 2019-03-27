@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Remind drink water</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+        appId: "5d3d77b3-85f7-4d9b-8873-367b10f0b1f3",
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <main class="wrapper">
+    <nav>
+        <a href="#home">ĐĂNG KÍ</a>
+        <a href="#description">CÁCH UỐNG NƯỚC</a>
+        <a href="#about">THÔNG TIN THÊM</a>
+    </nav>
+    <section class="section parallax" id="home">
+        <div class="action-zone">
+            <h1>Uống nước đúng giờ và khoa học</h1>
+            <h3>Ứng dụng sẽ gửi tin nhắn web-push tới trình duyệt của bạn để nhắc nhở bạn uống nước (＾-＾)＿日</h3>
+            <div class="action">
+                <div class='onesignal-customlink-container'></div>
+            </div>
+        </div>
+    </section>
+    <section class="section static" id="description">
+        <h1>THỜI GIAN BIỂU UỐNG NƯỚC KHOA HỌC</h1>
+        <ul>
+            <li>6h30 - 7h: Sau giấc ngủ đêm, cơ thể bạn thực sự sẽ rất cần nước. Hãy uống một cốc 250ml ngay khi ngủ dậy để giúp lọc sạch gan và thận. Đừng vội ăn sáng ít nhất là nửa tiếng sau khi uống nước, hãy đề nước ngấm vào đến từng tế bào trong cơ thể bạn.</li>
+            <li>8 - 9h: Việc di chuyển đến chỗ làm vào buổi sáng chắc hẳn gây cho bạn không ít căng thẳng và làm cơ thể bạn mất nước. Uống một cốc nước khi bạn đến công sở để lấy lại sự sảng khoái cho cơ thể bắt đầu làm việc.</li>
+            <li>11h: Sau vài giờ làm việc trong văn phòng đóng kín, hơi nóng từ máy văn phòng và không khí ngột ngạt làm khô da bạn. Hãy uống nước để giữ ẩm cho cơ thể và giảm căng thẳng công việc.</li>
+            <li>13h: Uống nước sau bữa trưa không chỉ tốt cho tiêu hóa mà còn giúp bạn giữ được vóc dáng cân đối.</li>
+            <li>15 - 16h: Giờ làm việc buổi chiều, nhiều người cảm thấy buồn ngủ và không thể tập trung vào công việc. Đứng dậy và uống một cốc nước sẽ giúp bạn lấy lại thăng bằng.</li>
+            <li>17h: Một cốc nước trước khi rời văn phòng sẽ giúp bạn bớt cảm giác đói và mệt. Điều này đặc biệt tốt cho người ăn kiêng vào buổi tối.</li>
+            <li>22h: Uống nước nửa giờ đến một giờ trước khi đi ngủ sẽ giúp cơ thể phòng chống nguy cơ máu cục máu đông.</li>
+        </ul>
+    </section>
+    <section class="section parallax" id="about">
+        <h1>Tác giả: Thai Le</h1>
+        <h1>Link source code: <a href="https://github.com/leethais91/blog-node-remind-drink-water-webpush">Github</a>.</h1>
+    </section>
+    </main>
+</body>
+
+</html>

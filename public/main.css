@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,600");
+html,
+body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: "Nunito", sans-serif;
+    color: #8c979e;
+    overflow-x: hidden;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiny reset thingy */
+
+.wrapper {
+    /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+    height: 100vh;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    overflow-y: auto;
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    text-align: right;
+    padding: 15px 30px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 1);
+    color: #636b6f;
+    z-index: 9999;
+}
+
+nav a {
+    padding: 1rem;
+    font-size: 120%;
+    font-weight: 600;
+    text-decoration: none;
+    color: #636b6f;
+}
+
+.section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+
+    /* For text formatting. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+    background: white;
+    height: unset;
+    color: black;
+    flex-direction: column;
+    padding: 3rem 2rem;
+}
+.static ul {
+  max-width: 60rem;
+}
+.static ul li {
+    display: block;
+    padding: 1.8rem 6rem 1.8rem 4rem;
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    font-size: 120%;
+}
+
+
+@media (max-width: 768px) {
+  .static ul {
+    padding: 0;
+  }
+  .static ul li {
+    display: block;
+    padding: .8rem 1rem .8rem 1rem;
+    text-align: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    font-size: 120%;
+}
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+#home {
+    height: 100vh;
+    flex-direction: column;
+}
+
+.action-zone {
+    display: block;
+    padding: 30px 30px 20px 30px;
+    border-radius: 5px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-align: center;
+}
+.action-zone h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.onesignal-customlink-container {
+    display: block;
+    padding: 30px 20px;
+    border-radius: 5px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-align: center;
+}
+
+.onesignal-customlink-container p {
+    color: white !important;
+    text-align: center;
+}
+a {
+    color: aqua;
+}
+
+#home::after {
+    background-image: url("ocean1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about {
+    height: 40vh;
+    flex-direction: column;
+    background-color: #333;
+}
